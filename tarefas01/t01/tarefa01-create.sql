@@ -41,11 +41,14 @@ CREATE TABLE atividade (
 );
 
 CREATE TABLE atividade_projeto (
-  cod_projeto SERIAL,
+  cod_projeto INT,
   cod_atividade INT,
-  PRIMARY KEY (cod_atividade, cod_projeto),
+  PRIMARY KEY (cod_projeto, cod_atividade),
   FOREIGN KEY (cod_projeto) REFERENCES projeto(codigo),
   FOREIGN KEY (cod_atividade) REFERENCES atividade(codigo)
 );
 
-AFTER TABLE funcionario ADD CONSTRAINT funcDeptoFK FOREIGN KEY (cod_depto) REFERENCES departamento(codigo) ON DELETE SET NULL ON UPDATE cascade;
+ALTER TABLE funcionario 
+ADD CONSTRAINT fk_funcDepto
+FOREIGN KEY (cod_depto) REFERENCES departamento(codigo)
+ON DELETE SET NULL ON UPDATE cascade;
