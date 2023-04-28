@@ -10,7 +10,7 @@ INNER JOIN vw_deptoFunc
 
 -- nome do dep do projeto
 CREATE VIEW vw_dep_projeto AS
-SELECT d.nome
+SELECT d.descricao
 FROM departamento d
 INNER JOIN projeto p
 ON p.cod_depto = d.codigo
@@ -23,8 +23,8 @@ INNER JOIN projeto p ON p.cod_responsavel = f.codigo
 
 -- o nome do departamento do funcionário responsável (utilizando a outra view)
 CREATE VIEW vw_deptoFunc AS
-SELECT d.nome
+SELECT d.descricao
 FROM departamento d
 INNER JOIN vw_resp_projeto
-ON f.codigo = d.codigo
+ON f.codigo = d.cod_gerente
 
