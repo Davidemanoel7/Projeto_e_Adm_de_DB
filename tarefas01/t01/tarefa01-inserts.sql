@@ -30,8 +30,8 @@ insert into projeto(nome, descricao, cod_depto, cod_responsavel, dataInicio, dat
 values ('APF', 'Analisador de Ponto de Função', 2, 2, '2018-02-26', '2019-06-30'),
         ('Monitoria', 'Projeto de Monitoria 2019.1', 1, 6, '2019-02-26', '2019-12-30'),
         ('BD', 'Projeto de Banco de Dados', 3, 5, '2018-02-26', '2018-06-30'),
-        ('ES', 'Projeto de Engenharia de Software', 1, 1, '2018-02-26', '2018-06-30'),
-        ('POO', 'Programacao Orientada a Obj.', 1, 1, '2018-02-26', '2018-06-30');
+        ('ES', 'Projeto de Engenharia de Software', 4, 5, '2018-02-26', '2018-06-30'),
+        ('POO', 'Programacao Orientada a Obj.', 2, 3, '2018-02-26', '2018-06-30');
 
 -- Adicionando Atividades
 
@@ -41,3 +41,10 @@ values ('A1','Atividade 1', 1, '2018-02-26', '2018-06-21'),
         ('A3','Atividade 3', 3, '2022-02-26', '2018-01-10'),
         ('A4','Atividade 4', 4, '2010-12-26', '2018-09-11'),
         ('A5','Atividade 5', 5, '2015-02-26', '2017-06-30');
+
+INSERT INTO atividade_projeto (cod_projeto, cod_atividade)
+VALUES (1,1),
+        (1,2),
+        (2,3),
+        (3,4),
+        (4,1);
