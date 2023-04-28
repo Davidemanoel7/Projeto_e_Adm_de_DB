@@ -12,7 +12,7 @@ ON a.cod_responsavel = f.codigo
 
 --número de atividades que este funcionário é responsável
 
-SELECT COUT(vw_resp_ativ) AS 'Quantidade_atividades'
+SELECT f.nome, COUNT(vw_resp_ativ) AS 'Quantidade_atividades'
 FROM vw_resp_ativ
 INNER JOIN funcionario f
 ON f.nome IN (vw_qnt_atividade)
