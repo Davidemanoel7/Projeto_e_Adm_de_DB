@@ -1,4 +1,7 @@
---criando view
+--Questão 07
+--Faça uma consulta que selecione o nome do departamento, o nome do gerente, 
+--e o número de funcionários de cada departamento. Deve aparecer os departamentos sem gerente e sem funcionários. 
+--Crie uma view para totalizar o número de funcionários em cada departamento e utilize-a na consulta.
 
 CREATE VIEW vw_func_dept AS
 SELECT cod_depto, COUNT(*) AS num_func
